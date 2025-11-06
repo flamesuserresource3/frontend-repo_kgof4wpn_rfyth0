@@ -11,6 +11,11 @@ function App() {
       <Hero />
       <CarouselGiveaways />
       <ImpactSection />
+      {/* Simple FAQ anchor target for nav smooth-scroll */}
+      <section id="faq" className="max-w-6xl mx-auto px-4 py-12">
+        <h2 className="text-2xl font-semibold text-slate-900">FAQs</h2>
+        <p className="text-slate-600 mt-2">We’ll publish detailed FAQs soon. For now, entries fund NGOs and winners receive digital vouchers.</p>
+      </section>
       <Footer />
     </div>
   );

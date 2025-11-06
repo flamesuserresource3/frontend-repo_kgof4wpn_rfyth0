@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Clock, Heart, Ticket } from 'lucide-react';
+import ScrollLink from './ScrollLink';
 
 function Countdown({ target }) {
   const [timeLeft, setTimeLeft] = useState('');
@@ -65,7 +66,7 @@ export default function CarouselGiveaways() {
           <h2 className="text-2xl font-semibold text-slate-900">Live Giveaways</h2>
           <p className="text-slate-600">Enter now — every entry supports a cause.</p>
         </div>
-        <a href="#all" className="text-slate-700 hover:text-slate-900 text-sm">View all</a>
+        <ScrollLink to="#giveaways" className="text-slate-700 hover:text-slate-900 text-sm">View all</ScrollLink>
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -106,7 +107,7 @@ export default function CarouselGiveaways() {
 
                 <div className="mt-4 flex items-center justify-between text-sm">
                   <div className="text-slate-600">Charity 12%</div>
-                  <button className="px-3 py-2 rounded-lg bg-slate-900 text-white hover:bg-black/90">Donate & Enter</button>
+                  <ScrollLink to="#impact" className="px-3 py-2 rounded-lg bg-slate-900 text-white hover:bg-black/90 active:scale-[0.98] transition">Donate & Enter</ScrollLink>
                 </div>
               </div>
             </div>

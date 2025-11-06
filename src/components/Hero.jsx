@@ -1,20 +1,18 @@
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
+import ScrollLink from './ScrollLink';
 
 export default function Hero() {
   return (
     <section id="home" className="relative">
-      {/* Full-width cover background */}
       <div className="relative h-[64vh] md:h-[72vh] w-full overflow-hidden">
         <Spline
           scene="https://prod.spline.design/BWzdo650n-g-M9RS/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
-        {/* Soft overlay to improve contrast, does not block interaction */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
       </div>
 
-      {/* Content stacked on bottom/center for balance */}
       <div className="absolute inset-0 flex items-end md:items-center">
         <div className="max-w-6xl mx-auto px-4 w-full pb-8 md:pb-0">
           <motion.div
@@ -31,18 +29,18 @@ export default function Hero() {
               Every entry supports verified NGOs. No cash payouts — only compliant digital vouchers with transparent reporting.
             </p>
             <div className="mt-5 flex flex-col sm:flex-row gap-3">
-              <a
-                href="#giveaways"
+              <ScrollLink
+                to="#giveaways"
                 className="inline-flex justify-center items-center px-4 py-2.5 rounded-lg text-white bg-white/10 border border-white/20 hover:bg-white/15 transition"
               >
                 Explore Giveaways
-              </a>
-              <a
-                href="#impact"
+              </ScrollLink>
+              <ScrollLink
+                to="#impact"
                 className="inline-flex justify-center items-center px-4 py-2.5 rounded-lg text-slate-900 bg-white hover:bg-slate-100 transition"
               >
                 Our Impact
-              </a>
+              </ScrollLink>
             </div>
           </motion.div>
         </div>
